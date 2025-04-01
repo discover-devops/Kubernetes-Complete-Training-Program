@@ -1,137 +1,149 @@
-# **comprehensive Kubernetes training course** combines all the topics covered in both **CKA (Certified Kubernetes Administrator)** and **CKAD (Certified Kubernetes Application Developer)** exams.
+##  **Full training course content**, aligned with the **CKA** and **CKAD exam requirements**, based on the latest CNCF curriculum.
 
 ---
 
-## Kubernetes Complete Training Program  
-**Covers Both CKA and CKAD Topics**  
-**Audience**: Cloud Engineers, DevOps Engineers, Developers, SREs  
-**Format**: Hands-on, Lab-Oriented, Real-World Focused
+## **Kubernetes Training Course**  
+**Covers All Topics for CKA and CKAD Certification**  
+**Audience**: DevOps Engineers, Cloud Engineers, Application Developers  
+**Delivery**: Hands-on with labs, real-world scenarios, and exam-focused practice  
 
 ---
 
-### **Module 1: Kubernetes and Container Fundamentals**
-- Introduction to containers and Kubernetes
-- Kubernetes architecture and components
-- Control plane vs node components
-- Pod lifecycle and container runtime interface
-- Kubernetes installation options (minikube, kubeadm, kind)
+### **Module 1: Introduction to Kubernetes and Containers**
+
+- What is containerization
+- Introduction to Docker
+- Kubernetes overview and use cases
+- Kubernetes architecture: Control Plane and Node components
+- Understanding Kubernetes objects: Pods, ReplicaSets, Deployments, Services
+- Kubernetes API server and object management
+- Kubernetes CLI: kubectl basics
 
 ---
 
-### **Module 2: Kubernetes Core Concepts**
-- Pods, ReplicaSets, Deployments
-- Namespace and label selectors
-- Service types: ClusterIP, NodePort, LoadBalancer
-- Understanding kubeconfig and context switching
-- Imperative vs declarative approach (kubectl vs YAML)
+### **Module 2: Pod Design and Application Deployment**
+
+- Creating Pods, Deployments, and ReplicaSets
+- Multi-container Pods: sidecar, adapter, ambassador patterns
+- Init containers
+- Working with ConfigMaps and Secrets
+- Probes: Liveness and Readiness
+- Managing environment variables in Pods
+- Resource requests and limits
+- Managing Jobs and CronJobs
 
 ---
 
-### **Module 3: Cluster Installation and Configuration**  
-*(CKA Focused)*
-- Setting up clusters using kubeadm
-- Bootstrap tokens, kubelet, kubeadm init and join
-- Certificate management and encryption providers
-- Configuring the kubelet and kube-proxy
-- Cluster networking fundamentals (CNI)
+### **Module 3: Kubernetes Configuration and Imperative Commands**
+
+- Imperative vs Declarative approach
+- Writing and applying YAML manifests
+- Using kubectl to generate YAML
+- Dry-run and output flags for validation
+- Labels, selectors, and annotations
 
 ---
 
-### **Module 4: Application Deployment and Management**
-- Deployments and rollout strategies
-- Jobs and CronJobs
-- ConfigMaps and Secrets
-- Liveness and readiness probes
-- Init containers and multi-container Pods
-- Resource requests, limits, and quotas
-- Application troubleshooting techniques
+### **Module 4: Services and Networking**
+
+- Cluster networking overview
+- Understanding ClusterIP, NodePort, LoadBalancer services
+- Service discovery with kube-dns and CoreDNS
+- NetworkPolicies for traffic control
+- Configuring ingress rules (basic concepts)
 
 ---
 
-### **Module 5: Scheduling and Node Management**  
-*(CKA Focused)*
-- Manual scheduling
-- Node selectors and affinity rules
+### **Module 5: Scheduling in Kubernetes**
+
+- Manual scheduling using nodeName
+- Controlling pod placement with nodeSelector
+- Affinity and anti-affinity rules
 - Taints and tolerations
-- Node management and cordoning
-- Draining and labeling nodes
+- Pod priority and preemption
 
 ---
 
-### **Module 6: Networking and Services**
-- Understanding DNS and coreDNS
-- Service discovery and kube-dns
-- ClusterIP, NodePort, and LoadBalancer usage
-- Ingress controllers and ingress resource configuration
-- Network policies
+### **Module 6: Logging and Monitoring**
+
+- Viewing logs using kubectl logs
+- Using kubectl exec for live debugging
+- Monitoring resource usage with top commands
+- Troubleshooting failed Pods and CrashLoopBackOff
+- Event inspection and analysis
 
 ---
 
-### **Module 7: Helm and Package Management**
-- Helm v3 overview and architecture
-- Creating Helm charts and templates
-- Installing and upgrading applications using Helm
-- Helm with GitOps (Flux or ArgoCD)
+### **Module 7: Security and Access Control**
+
+- Overview of Kubernetes authentication and authorization
+- Service accounts and context switching
+- Role-Based Access Control (RBAC): Roles, ClusterRoles, RoleBindings
+- Controlling access to resources using RBAC
+- Security contexts in Pod specs
+- Basic TLS concepts and Secrets usage
 
 ---
 
-### **Module 8: Security in Kubernetes**
-- Role-based access control (RBAC)
-- Service accounts and kubeconfig auth
-- Admission controllers and PodSecurityPolicy
-- Network policy enforcement
-- Secrets encryption and secure practices
+### **Module 8: Storage in Kubernetes**
+
+- Volumes overview: emptyDir, hostPath, configMap, secret
+- PersistentVolumes and PersistentVolumeClaims
+- StorageClass and dynamic provisioning
+- Access modes and reclaim policies
 
 ---
 
-### **Module 9: Logging, Monitoring, and Observability**
-- Logging architecture: stdout, sidecars, and DaemonSets
-- Centralized logging tools overview (EFK, Loki, Datadog)
-- Monitoring with Prometheus and Grafana
-- Probes and metrics
-- Audit logs and security event tracking
+### **Module 9: Cluster Architecture, Installation, and Maintenance**  
+**(CKA Focused)**
+
+- Components of a production-grade Kubernetes cluster
+- Installing Kubernetes using kubeadm
+- Bootstrapping the cluster: kubeadm init and join
+- TLS certificates and encryption providers
+- Working with systemd and kubelet
+- Backup and restore of etcd database
+- Performing cluster upgrades with kubeadm
+- Managing cluster nodes: cordon, drain, uncordon
 
 ---
 
-### **Module 10: Cluster Maintenance and Troubleshooting**
-- Backups using etcdctl and Velero
-- Disaster recovery and restore
-- Cluster upgrade process using kubeadm
-- Troubleshooting failed Pods, services, and nodes
-- Debugging with logs, events, and `kubectl debug`
+### **Module 10: Kubernetes Deployment Strategies**  
+**(CKA and CKAD Aligned)**
+
+- Deployment strategies in Kubernetes:
+  - Recreate strategy
+  - RollingUpdate strategy
+- Managing rollouts using:
+  - kubectl rollout
+  - kubectl rollout status
+  - kubectl rollout history
+  - kubectl rollout undo
+- Updating Deployments with zero downtime
+- Scaling and updating Deployments
+- Observing update behavior using kubectl get and kubectl describe
+- Performing rollbacks in case of failure
 
 ---
 
-### **Module 11: Networking Deep Dive and CNIs**
-- Overview of container network interfaces
-- Calico, Flannel, Cilium use cases
-- Service Mesh basics and Istio introduction
-- Istio for traffic routing and observability
+### **Module 11: Troubleshooting and Debugging**
+
+- Troubleshooting Pods and Deployments
+- Troubleshooting networking and Services
+- Using events to find root causes
+- Debugging node issues
+- Tools: describe, logs, exec, port-forward
 
 ---
 
-### **Module 12: GitOps, Blue-Green and Canary Deployments**
-- Deployment strategies: Recreate, RollingUpdate
-- Blue-Green deployments
-- Canary deployments using native K8s and Istio
-- GitOps with ArgoCD and FluxCD
+### **Module 12: Final Practice and Exam Readiness**
 
----
-
-### **Module 13: Final Lab and Exam Prep**
-- Practice exercises and mock exams
-- Real-world scenarios for debugging and recovery
-- YAML challenges and imperative command labs
-- Review of important kubectl commands
-- Time-boxed tasks under exam-like conditions
-
----
-
-### **Deliverables**
-- Hands-on labs and practice scenarios
-- Sample YAML files and GitHub repo access
-- CKAD and CKA tips and tricks sheet
-- Weekly assignments and review quizzes
+- CKA and CKAD exam format and environment
+- Navigating the Kubernetes documentation effectively
+- Time management strategies
+- Solving mock exam scenarios
+- YAML creation and editing under pressure
+- Final practice challenges
 
 ---
 
